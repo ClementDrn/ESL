@@ -121,6 +121,20 @@ namespace sel {
 			return *this;
 		}
 
+		/// @brief Overload of - unary arithmetic operator.
+		/// 
+		/// The instance's coordinates are negated.
+		/// 
+		/// @return A copy of the vector with updated coordinates.
+		/// 
+		Vec2& operator-() const
+		{
+			Vec2 v;
+			v.x = -x;
+			v.y = -y;
+			return v;
+		}
+
 		/// @brief Calculates the length of the vector.
 		/// 
 		/// @return The length of the vector.

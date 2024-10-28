@@ -143,6 +143,21 @@ namespace sel {
 			return *this;
 		}
 
+		/// @brief Overload of - unary arithmetic operator.
+		/// 
+		/// The instance's coordinates are negated.
+		/// 
+		/// @return A copy of the vector with updated coordinates.
+		/// 
+		Vec3& operator-() const
+		{
+			Vec3 v;
+			v.x = -x;
+			v.y = -y;
+			v.z = -z;
+			return v;
+		}
+
 		/// @brief Calculates the length of the vector.
 		/// 
 		/// @return The length of the vector.

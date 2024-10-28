@@ -101,6 +101,7 @@ namespace sel {
 			x *= rhs;
 			y *= rhs;
 			z *= rhs;
+			w *= rhs;
 			return *this;
 		}
 
@@ -117,6 +118,7 @@ namespace sel {
 			x /= rhs;
 			y /= rhs;
 			z /= rhs;
+			w /= rhs;
 			return *this;
 		}
 
@@ -133,6 +135,7 @@ namespace sel {
 			x *= rhs.x;
 			y *= rhs.y;
 			z *= rhs.z;
+			w *= rhs.w;
 			return *this;
 		}
 
@@ -149,7 +152,24 @@ namespace sel {
 			x /= rhs.x;
 			y /= rhs.y;
 			z /= rhs.z;
+			w /= rhs.w;
 			return *this;
+		}
+
+		/// @brief Overload of - unary arithmetic operator.
+		/// 
+		/// The instance's coordinates are negated.
+		/// 
+		/// @return A copy of the vector with updated coordinates.
+		/// 
+		Vec4& operator-() const
+		{
+			Vec4 v;
+			v.x = -x;
+			v.y = -y;
+			v.z = -z;
+			v.w = -w;
+			return v;
 		}
 
 		/// @brief Calculates the length of the vector.
