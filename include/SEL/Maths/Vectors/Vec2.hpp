@@ -328,6 +328,34 @@ namespace sel {
 		return u.x * v.y - u.y * v.x;
 	}
 
+	/// @brief Calculates the cross product of a 2D vector with a scalar
+	/// 
+	/// @tparam T is the type of the vectors' coordinates. 
+	/// @param vec is the 2D vector.
+	/// @param scalar is the scalar.
+	/// 
+	/// @return The cross product of the given arguments as a 2D vector.
+	/// 
+	template <class T>
+	Vec2<T> cross(const Vec2<T>& vec, T scalar)
+	{
+		return Vec2<T>(scalar * vec.y, -scalar * vec.x);
+	}
+
+	/// @brief Calculates the cross product of a scalar with a 2D vector
+	/// 
+	/// @tparam T is the type of the vectors' coordinates. 
+	/// @param scalar is the scalar.
+	/// @param vec is the 2D vector.
+	/// 
+	/// @return The cross product of the given arguments as a 2D vector.
+	/// 
+	template <class T>
+	Vec2<T> cross(T scalar, const Vec2<T>& vec)
+	{
+		return Vec2<T>(-scalar * vec.y, scalar * vec.x);
+	}
+
 	/// @brief Calculates the normalized version of a given vector.
 	///
 	/// @tparam T is the type of the vector's coordinates.
